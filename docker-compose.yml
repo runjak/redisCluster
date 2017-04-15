@@ -1,0 +1,63 @@
+# See https://docs.docker.com/compose/compose-file/
+version: '3'
+
+services:
+  '7000':
+    container_name: redisCluster_7000
+    build: ./7000
+    image: runjak/redis_7000
+    network_mode: 'host'
+    ports:
+      - '127.0.0.1:7000:7000'
+    volumes:
+      - ./7000/data:/data
+
+  '7001':
+    container_name: redisCluster_7001
+    build: ./7001
+    image: runjak/redis_7001
+    network_mode: 'host'
+    ports:
+      - '127.0.0.1:7001:7001'
+    volumes:
+      - ./7001/data:/data
+
+  '7002':
+    container_name: redisCluster_7002
+    build: ./7002
+    image: runjak/redis_7002
+    network_mode: 'host'
+    ports:
+      - '127.0.0.1:7002:7002'
+    volumes:
+      - ./7002/data:/data
+
+  '7003':
+    container_name: redisCluster_7003
+    build: ./7003
+    image: runjak/redis_7003
+    network_mode: 'host'
+    ports:
+      - '127.0.0.1:7003:7003'
+    volumes:
+      - ./7003/data:/data
+
+  '7004':
+    container_name: redisCluster_7004
+    build: ./7004
+    image: runjak/redis_7004
+    network_mode: 'host'
+    ports:
+      - '127.0.0.1:7004:7004'
+    volumes:
+      - ./7004/data:/data
+
+  '7005':
+    container_name: redisCluster_7005
+    build: ./7005
+    image: runjak/redis_7005
+    network_mode: 'host'
+    ports:
+      - '127.0.0.1:7005:7005'
+    volumes:
+      - ./7005/data:/data
