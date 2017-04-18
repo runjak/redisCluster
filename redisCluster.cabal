@@ -18,7 +18,6 @@ library
   exposed-modules:     Lib
   build-depends:       base >= 4.7 && < 5
                      , hedis >= 0.9.8
-                     , time >= 1.6.0.1
   default-language:    Haskell2010
 
 executable simple-exe

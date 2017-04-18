@@ -4,7 +4,6 @@ module Lib (
 
 import Database.Redis (ConnectInfo(..))
 import qualified Database.Redis as Redis
-import qualified Data.Time.Clock as Clock
 
 redisHosts :: [ConnectInfo]
 redisHosts = do
