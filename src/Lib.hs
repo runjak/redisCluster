@@ -1,9 +1,14 @@
-module Lib
-    ( someFunc
-    ) where
+module Lib (
+  redisHosts
+) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import Database.Redis (ConnectInfo(..))
+import qualified Database.Redis as Redis
+import qualified Data.Time.Clock as Clock
 
-redisHosts :: [(String, Int)]
-redisHosts = [("127.0.0.1", port) | port <- [7000..7005]]
+redisHosts :: [ConnectInfo]
+redisHosts = do
+  port <- [7000..7005]
+  return Redis.defaultConnectInfo {
+    connectPort = Redis.PortNumber port
+  }

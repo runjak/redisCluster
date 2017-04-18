@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Lib (redisHosts)
 
 main :: IO ()
-main = someFunc
+main = print redisHosts
